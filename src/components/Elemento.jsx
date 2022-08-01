@@ -14,11 +14,9 @@ import TitulosTexto from '../elements/Elemento/TitulosTexto'
 import Imagen from '../elements/Elemento/Imagen'
 import Error404 from './Error404'
 import { Helmet } from 'react-helmet'
-import SvgRegresar from './SvgComponents/SvgRegresar'
 import ContenedorRegresar from '../elements/Elemento/ContenedorRegresar'
 import LinkRegresar from '../elements/Elemento/LinkRegresar'
 import CentradorImg from '../elements/Elemento/CentradorImg'
-import SvgBuscador from './SvgComponents/SvgBuscador'
 
 const Elemento = () => {
   // obtenemos el numero atomico de la URL y le decimos que el objecto que coincida con el numeroAtomico - 1 (para poder acceder a su posicion del array) lo guardemos en una const para poder acceder a todas sus propiedades
@@ -73,14 +71,14 @@ const Elemento = () => {
 
       <LinkRegresar to="/tabla">
         <ContenedorRegresar>
-          <SvgRegresar />
+          <img src='/img/return.svg' alt='Regresar' loading='lazy' style={{ paddingLeft: '20px' }} />
           <p>Ir a la tabla</p>
         </ContenedorRegresar>
 
       </LinkRegresar>
       <LinkRegresar to="/buscar">
         <ContenedorRegresar>
-          <SvgBuscador />
+          <img src='/img/search.svg' alt='Buscar' loading='lazy' style={{ paddingLeft: '20px' }} />
           <p>Ir al buscador</p>
         </ContenedorRegresar>
       </LinkRegresar>
