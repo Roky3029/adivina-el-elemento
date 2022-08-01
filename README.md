@@ -27,4 +27,4 @@ Hey 👋, soy Roky, y si te gustan mis páginas puedes seguirme en algunas de mi
 [Discord](https://discord.gg/qkPun79h2y) 🎤
 (Puede que en Discord se publiquen características que llegarán en un futuro a Adivina El Elemento 👀)
 
-###### ❗ El objetivo de Adivina El Elemento es aprender los elementos de la tabla periódica de una manera divertida :)
+###### ❗ El objetivo de Adivina El Elemento es aprender los elementos de la tabla periódica de una manera divertida :D
