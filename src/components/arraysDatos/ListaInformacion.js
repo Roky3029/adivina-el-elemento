@@ -1,6 +1,6 @@
 const Elementos = [
   {
-    nombre: 'Hidrogeno',
+    nombre: 'Hidrógeno',
     simbolo: 'H',
     grupo: 'no-metales',
     numeroAtomico: '1',
@@ -69,7 +69,7 @@ const Elementos = [
     grupo: 'halogenos',
     numeroAtomico: '9',
     informacion: 'El flúor es un elemento muy reactivo en su forma elemental, ya que está a un solo electrón de completar la capa externa de electrones. El flúor es el decimo tercer elemento más abundante en la corteza terrestre, donde existe casi en su totalidad en forma de iones de flúor en los minerales. El mineral que mas flúor contiene es la fluorita, que esta formada principalmente por fluoruro de calcio (CaF2).',
-    curiosidad: 'A partir del s.XVI la fluorita se empezó a añadir a las menas de hierro, disminuyendo la temperatura a la que los metales se fundían cuando se calentaban las menas, haciendo que la mezcla fluyera. El nombre de flúor viene de la palabra latina "fluor", que significa "fluido", ya que la piedra usada para que las menas de hierro fluyeran estaba hecha de fluor.'
+    curiosidad: 'A partir del s.XVI la fluorita se empezó a añadir a las menas de hierro, disminuyendo la temperatura a la que los metales se fundían cuando se calentaban las menas, haciendo que la mezcla fluyera. El nombre de flúor viene de la palabra latina "flúor", que significa "fluido", ya que la piedra usada para que las menas de hierro fluyeran estaba hecha de flúor.'
   },
   {
     nombre: 'Neón',
@@ -256,7 +256,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Arsenico',
+    nombre: 'Arsénico',
     simbolo: 'As',
     grupo: 'metaloides',
     numeroAtomico: '33',
@@ -504,7 +504,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Galodinio',
+    nombre: 'Gadolinio',
     simbolo: 'Gd',
     grupo: 'lantanidos',
     numeroAtomico: '64',
@@ -576,7 +576,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Tantalo',
+    nombre: 'Tántalo',
     simbolo: 'Ta',
     grupo: 'metales-transicion',
     numeroAtomico: '73',
@@ -720,7 +720,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Proactinio',
+    nombre: 'Protactinio',
     simbolo: 'Pa',
     grupo: 'actinidos',
     numeroAtomico: '91',
@@ -865,7 +865,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Mietnerio',
+    nombre: 'Meitnerio',
     simbolo: 'Mt',
     grupo: 'metales-transicion',
     numeroAtomico: '109',
@@ -897,7 +897,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Nihomio',
+    nombre: 'Nihonio',
     simbolo: 'Nh',
     grupo: 'metales-p',
     numeroAtomico: '113',
@@ -921,7 +921,7 @@ const Elementos = [
     curiosidad: ''
   },
   {
-    nombre: 'Livermonio',
+    nombre: 'Livermorio',
     simbolo: 'Lv',
     grupo: 'metales-p',
     numeroAtomico: '116',

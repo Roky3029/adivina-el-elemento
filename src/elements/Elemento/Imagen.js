@@ -11,6 +11,11 @@ const Imagen = styled.img`
     @media screen and (max-width: 1000px) {
         margin-left: 0;
     }
+
+    @media screen and (max-width: 520px){
+        width: 300px;
+        height: 300px;
+    }
 `
 
 export default Imagen

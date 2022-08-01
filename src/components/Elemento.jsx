@@ -1,7 +1,7 @@
 import React from 'react'
 import ContenedorInformacion from '../elements/Elemento/ContenedorInformacion'
 import ElementoStyled from '../elements/Elemento/ElementoStyled'
-import Elementos from './arraysTablaPeriodica/ListaInformacion'
+import Elementos from './arraysDatos/ListaInformacion'
 import NombreElemento from '../elements/Elemento/NombreElemento'
 import { useParams } from 'react-router-dom'
 import ContenedorMap from '../elements/Elemento/ContenedorMap'
@@ -14,10 +14,11 @@ import TitulosTexto from '../elements/Elemento/TitulosTexto'
 import Imagen from '../elements/Elemento/Imagen'
 import Error404 from './Error404'
 import { Helmet } from 'react-helmet'
-import SvgRegresar from './SvgRegresar'
+import SvgRegresar from './SvgComponents/SvgRegresar'
 import ContenedorRegresar from '../elements/Elemento/ContenedorRegresar'
 import LinkRegresar from '../elements/Elemento/LinkRegresar'
 import CentradorImg from '../elements/Elemento/CentradorImg'
+import SvgBuscador from './SvgComponents/SvgBuscador'
 
 const Elemento = () => {
   // obtenemos el numero atomico de la URL y le decimos que el objecto que coincida con el numeroAtomico - 1 (para poder acceder a su posicion del array) lo guardemos en una const para poder acceder a todas sus propiedades
@@ -61,6 +62,9 @@ const Elemento = () => {
       break
   }
 
+  // para que pueda aparecer con acentos pero la imagen la busque sin ellas
+  const nombreCoincidenteSinAcentos = objectoCoincidente.nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
+
   return (
     <>
       <Helmet>
@@ -70,7 +74,14 @@ const Elemento = () => {
       <LinkRegresar to="/tabla">
         <ContenedorRegresar>
           <SvgRegresar />
-          <p>Volver a la tabla</p>
+          <p>Ir a la tabla</p>
+        </ContenedorRegresar>
+
+      </LinkRegresar>
+      <LinkRegresar to="/buscar">
+        <ContenedorRegresar>
+          <SvgBuscador />
+          <p>Ir al buscador</p>
         </ContenedorRegresar>
       </LinkRegresar>
 
@@ -91,19 +102,36 @@ const Elemento = () => {
             </ContenedorTituloNumero>
 
             <CentradorImg>
-              <Imagen src={'../img/elementos/Hidrógeno.jpg'} alt={`Foto del ${objectoCoincidente.nombre}`} />
+              <Imagen src={`/img/elementos/${nombreCoincidenteSinAcentos}.jpg`} alt={`Foto del ${objectoCoincidente.nombre}`} />
             </CentradorImg>
 
             <ContenedorTextos>
 
               <ContenedorTexto>
                 <TitulosTexto>Información del elemento</TitulosTexto>
-                <Textos>{objectoCoincidente.informacion}</Textos>
+                <Textos>{objectoCoincidente.informacion.length === 0 ? `¡Ups! No hemos encontrado información del ${objectoCoincidente.nombre}. Pero pronto la habrá.` : objectoCoincidente.informacion}</Textos>
+
+                {objectoCoincidente.informacion.length === 0
+                  ? <lord-icon
+                    src="https://cdn.lordicon.com/pvbutfdk.json"
+                    trigger="loop"
+                    delay="1000"
+                    style={{ width: '150px', height: '150px', textAlign: 'center' }}>
+                  </lord-icon>
+                  : ''}
               </ContenedorTexto>
 
               <ContenedorTexto>
                 <TitulosTexto>Datos curiosos del elemento</TitulosTexto>
-                <Textos>{objectoCoincidente.curiosidad}</Textos>
+                <Textos>{objectoCoincidente.curiosidad.length === 0 ? `¡Vaya! No hemos sido capaces de encontrar datos curiosos del ${objectoCoincidente.nombre}, pero no te preocupes, muy pronto habrá información al respecto.` : objectoCoincidente.curiosidad}</Textos>
+                {objectoCoincidente.curiosidad.length === 0
+                  ? <lord-icon
+                    src="https://cdn.lordicon.com/fpuyuudi.json"
+                    trigger="loop"
+                    delay="1000"
+                    style={{ width: '150px', height: '150px', textAlign: 'center' }}>
+                  </lord-icon>
+                  : ''}
               </ContenedorTexto>
 
             </ContenedorTextos>

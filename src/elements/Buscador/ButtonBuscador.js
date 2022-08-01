@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const ButtonBuscador = styled.button`
-    padding: 15px;
+    padding: 20px;
+    font-size: 25px;
     border: none;
     background-color: #e1a377;
     border-radius: 30px;

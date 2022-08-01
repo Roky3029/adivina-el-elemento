@@ -31,7 +31,7 @@ const Navbar = () => {
             return (
               <li key={index} className={item.cName} onClick={() => setSidebar(false)}>
                 <Link to={item.path}>
-                  {item.icon}
+                  <img src={item.icon} alt="iconos" width="25px" loading='lazy'/>
                   <span>
                     {item.title}
                   </span>

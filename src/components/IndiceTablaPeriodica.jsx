@@ -2,7 +2,7 @@ import React from 'react'
 import BackgroundIndice from '../elements/TablaPeriodica/BackgroundIndice'
 import ListaIndice from '../elements/TablaPeriodica/ListaIndice'
 import ListaGrupo from '../elements/TablaPeriodica/ListaGrupo'
-import gruposDeLaTabla from './arraysTablaPeriodica/GruposDeLaTabla'
+import gruposDeLaTabla from './arraysDatos/GruposDeLaTabla'
 
 const IndiceTablaPeriodica = () => {
   return (

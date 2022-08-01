@@ -14,7 +14,7 @@ const Error404 = () => {
         <title>No encontrado | AEE</title>
       </Helmet>
       <Contenedor404>
-        <Imagen404 src="" alt='Matraz roto' />
+        <Imagen404 src="./../../public/img/broken-flask.png" alt='Matraz roto' />
         <Titulo404>Oh, vaya</Titulo404>
         <Texto404>Parece que la página que has buscado no existe</Texto404>
         <Redireccion404>Prueba a <Enlace404 href="/">volver al inicio</Enlace404></Redireccion404>

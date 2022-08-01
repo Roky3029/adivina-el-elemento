@@ -15,6 +15,8 @@ const ContenedorRegresar = styled.div`
     top: 15px;
     border-radius: 10px;
     
+    margin-bottom: 20px;
+    
     p{
       transition: all .3s;
       transform: translateX(-30px);

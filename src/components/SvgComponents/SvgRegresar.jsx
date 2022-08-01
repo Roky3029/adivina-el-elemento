@@ -1,7 +1,7 @@
 import React from 'react'
-import BtnRegresar from './../elements/Elemento/BtnRegresar'
+import BtnRegresar from '../../elements/Elemento/BtnRegresar'
 
-const SvgComponent = () => {
+const SvgRegresar = () => {
   return (
     <BtnRegresar
       clipRule="evenodd"
@@ -19,4 +19,4 @@ const SvgComponent = () => {
   )
 }
 
-export default SvgComponent
+export default SvgRegresar

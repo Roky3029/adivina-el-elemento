@@ -9,12 +9,10 @@ import SocialIconContainer from '../elements/Footer/SocialIconContainer'
 import Copyright from '../elements/Footer/Copyright'
 import Version from '../elements/Footer/Version'
 
-import { getImageUrl } from './../functions/getImageUrl'
-
 const Footer = ({ noTop }) => {
   return (
     <FooterStyled noTop={noTop}>
-      <LogoImg src={getImageUrl('logo.png')} alt="Logo" />
+      <LogoImg src="/img/logo.png" alt="Logo" />
       <SocialIconContainer className='social-icons-container'>
         <a href="https://www.instagram.com/kirkydev_30/" target="_blank" rel='noreferrer'>
           <FontAwesomeIcon icon={faInstagram} className='social-icon-svg' />
@@ -27,7 +25,7 @@ const Footer = ({ noTop }) => {
         </a>
       </SocialIconContainer>
       <Copyright>Roky &copy; 2022. Todos los derechos reservados</Copyright>
-      <Version>Version 1.2.1</Version>
+      <Version>Version 2.0.1</Version>
     </FooterStyled>
   )
 }

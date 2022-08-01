@@ -10,10 +10,9 @@ const ContenedorTextos = styled.div`
     height: 400px;
     gap: 30px;
 
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: 890px){
         grid-template-columns: 1fr;
         margin-top: 40px;
-        
     }
 `
 

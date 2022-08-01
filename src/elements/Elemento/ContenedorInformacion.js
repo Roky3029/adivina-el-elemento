@@ -4,7 +4,7 @@ const ContenedorInformacion = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh
+    height: 120vh;
 `
 
 export default ContenedorInformacion
