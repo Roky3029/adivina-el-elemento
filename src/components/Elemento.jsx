@@ -60,9 +60,6 @@ const Elemento = () => {
       break
   }
 
-  // para que pueda aparecer con acentos pero la imagen la busque sin ellas
-  const nombreCoincidenteSinAcentos = objectoCoincidente.nombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
-
   return (
     <>
       <Helmet>
@@ -100,7 +97,7 @@ const Elemento = () => {
             </ContenedorTituloNumero>
 
             <CentradorImg>
-              <Imagen src={`/img/elementos/${nombreCoincidenteSinAcentos}.jpg`} alt={`Foto del ${objectoCoincidente.nombre}`} />
+              <Imagen src={`/img/elementos/${objectoCoincidente.nombre}.jpg`} alt={`Foto del ${objectoCoincidente.nombre}`} />
             </CentradorImg>
 
             <ContenedorTextos>
