@@ -100,7 +100,7 @@ const Elemento = () => {
             </ContenedorTituloNumero>
 
             <CentradorImg>
-              <Imagen src={`/img/elementos/${objetoCoincidente.nombre}.jpg`} alt={`Foto del ${objectoCoincidente.nombre}`} />
+              <Imagen src={`/img/elementos/${objectoCoincidente.nombre}.jpg`} alt={`Foto del ${objectoCoincidente.nombre}`} />
             </CentradorImg>
 
             <ContenedorTextos>
