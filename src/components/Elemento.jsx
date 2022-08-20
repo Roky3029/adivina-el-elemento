@@ -1,12 +1,12 @@
 import React from 'react'
 import ContenedorInformacion from '../elements/Elemento/ContenedorInformacion'
 import ElementoStyled from '../elements/Elemento/ElementoStyled'
-import Elementos from './arraysDatos/ListaInformacion'
+import ListaInformacion from './arraysDatos/ListaInformacion'
 import NombreElemento from '../elements/Elemento/NombreElemento'
 import { useParams } from 'react-router-dom'
 import ContenedorMap from '../elements/Elemento/ContenedorMap'
 import Textos from '../elements/Elemento/Textos'
-import NumeroAtomico from '../elements/Elemento/NumeroAtomico'
+import InformacionElemento from '../elements/Elemento/InformacionElemento'
 import ContenedorTituloNumero from '../elements/Elemento/ContenedorTituloNumero'
 import ContenedorTextos from '../elements/Elemento/ContenedorTextos'
 import ContenedorTexto from '../elements/Elemento/ContenedorTexto'
@@ -17,48 +17,16 @@ import { Helmet } from 'react-helmet'
 import ContenedorRegresar from '../elements/Elemento/ContenedorRegresar'
 import LinkRegresar from '../elements/Elemento/LinkRegresar'
 import CentradorImg from '../elements/Elemento/CentradorImg'
+import useObtenerGrupo from '../hooks/useObtenerGrupo'
+import Creditos from '../elements/Elemento/Creditos'
 
 const Elemento = () => {
   // obtenemos el numero atomico de la URL y le decimos que el objecto que coincida con el numeroAtomico - 1 (para poder acceder a su posicion del array) lo guardemos en una const para poder acceder a todas sus propiedades
 
   const { numeroAtomico } = useParams()
-  const objectoCoincidente = Elementos[numeroAtomico - 1] || {}
+  const objectoCoincidente = ListaInformacion[numeroAtomico - 1] || {}
 
-  let colorFondo
-  switch (objectoCoincidente.grupo) {
-    case 'no-metales':
-      colorFondo = '#30d23f'
-      break
-    case 'alcalinos':
-      colorFondo = '#614838'
-      break
-    case 'alcalinoterreos':
-      colorFondo = '#e7b22d'
-      break
-    case 'metales-transicion':
-      colorFondo = '#b5ab94'
-      break
-    case 'lantanidos':
-      colorFondo = '#ee75ff'
-      break
-    case 'actinidos':
-      colorFondo = '#ff00f7'
-      break
-    case 'metales-p':
-      colorFondo = '#a2c49d'
-      break
-    case 'metaloides':
-      colorFondo = '#2f8a21'
-      break
-    case 'halogenos':
-      colorFondo = '#9be2e3'
-      break
-    case 'gases-nobles':
-      colorFondo = '#0f63ec'
-      break
-    default:
-      break
-  }
+  const [colorFondo, grupoPerteneciente] = useObtenerGrupo(objectoCoincidente.grupo)
 
   return (
     <>
@@ -90,10 +58,9 @@ const Elemento = () => {
             </ElementoStyled>
 
             <ContenedorTituloNumero>
-              <NombreElemento>
-                {objectoCoincidente.nombre}
-              </NombreElemento>
-              <NumeroAtomico>Número atómico: <span>{objectoCoincidente.numeroAtomico}</span></NumeroAtomico>
+              <NombreElemento>{objectoCoincidente.nombre}</NombreElemento>
+              <InformacionElemento>Número atómico: <span>{objectoCoincidente.numeroAtomico}</span></InformacionElemento>
+              <InformacionElemento>Grupo: <span>{grupoPerteneciente}</span></InformacionElemento>
             </ContenedorTituloNumero>
 
             <CentradorImg>
@@ -104,7 +71,7 @@ const Elemento = () => {
 
               <ContenedorTexto>
                 <TitulosTexto>Información del elemento</TitulosTexto>
-                <Textos>{objectoCoincidente.informacion.length === 0 ? `¡Ups! No hemos encontrado información del ${objectoCoincidente.nombre}. Pero pronto la habrá.` : objectoCoincidente.informacion}</Textos>
+                <Textos>{objectoCoincidente.informacion.length === 0 ? `¡Ups! No hemos encontrado información del elemento ${objectoCoincidente.nombre}. Pero pronto la habrá.` : objectoCoincidente.informacion}</Textos>
 
                 {objectoCoincidente.informacion.length === 0
                   ? <lord-icon
@@ -134,6 +101,8 @@ const Elemento = () => {
           : <Error404 />
         }
       </ContenedorInformacion>
+
+      {objectoCoincidente.informacion.length !== 0 ? <Creditos>Información extraida del libro &quot;Los Elementos: La nueva guía de los componentes básicos del universo&quot; de &quot;Jack Challoner&quot;. Edición del 2018</Creditos> : ''}
     </>
   )
 }

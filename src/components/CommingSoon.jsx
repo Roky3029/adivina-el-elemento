@@ -14,19 +14,12 @@ const CommingSoon = () => {
       <ContenedorSoon>
         <TituloSoon>Trabajando en ello...</TituloSoon>
         <ContenedorIconos>
-          {/* <lord-icon
-                    src="https://cdn.lordicon.com/pndvzexs.json"
-                    trigger="loop"
-                    delay="1000"
-                    colors="primary:#121331,secondary:#66d7ee"
-                    style="width:150px;height:150px">
-                </lord-icon>
-                <lord-icon
-                    src="https://cdn.lordicon.com/pndvzexs.json"
-                    trigger="loop"
-                    delay="1000"
-                    style={{ width: "175px", height: "175px" }}>
-                </lord-icon> */}
+          <lord-icon
+            src="https://cdn.lordicon.com/pndvzexs.json"
+            trigger="loop"
+            delay="1000"
+            style={{ width: '250px', height: '250px' }}>
+          </lord-icon>
         </ContenedorIconos>
       </ContenedorSoon>
     </>

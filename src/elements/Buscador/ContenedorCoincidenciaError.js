@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ContenedorCoincidenciaError = styled.div`
-    padding-top: 50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -3,18 +3,14 @@ import styled from 'styled-components'
 const ButtonSwitch = styled.button`
     border: none;
     padding: 20px;
-    background: #f18377;
+    background: ${props => props.isdisabled ? '#b9b3b3' : '#f18377'};
     border-radius: 10px;
     font-size: 16px;
     transition: all .3s;
+    transform: ${props => props.isdisabled ? 'scale(0.8)' : 'none'};
 
     &:hover{
-      transform: scale(1.05);
-      font-size: 18px;
-    }
-
-    &:focus{
-      transform: translateY(-1px);
+      ${props => props.isdisabled ? '' : 'transform: scale(1.1)'}
     }
 `
 

@@ -1,27 +1,33 @@
 import styled from 'styled-components'
 
 const ContenedorElementos = styled.div`
-    margin-top: 5px;
-    width: 1260px;
-    padding: 0;
-    max-height: 630px;
-    gap: 2px;
     display: grid;
-    grid-template-columns: repeat(19, 70px);
+    grid-template-columns: repeat(18, 70px);
+    grid-template-rows: repeat(10, 70px);
+    gap: 2px;
 
     @media screen and (max-width: 1480px){
-        grid-template-columns: repeat(19, 50px);
-        width: 950px
+        grid-template-columns: repeat(18, 50px);
+        grid-template-rows: repeat(10, 50px);
+    }
+    
+    @media screen and (max-width: 960px){
+        grid-template-columns: repeat(18, 40px);
+        grid-template-rows: repeat(10, 40px);
+        font-size: 12px;
     }
 
-    @media screen and (max-width: 960px){
-        grid-template-columns: repeat(19, 40px);
-        width: 760px;
-    } 
-    
-    @media screen and (max-width: 830px){
-        grid-template-columns: repeat(8, 40px)
-    } 
+    @media screen and (max-width: 760px){
+        grid-template-columns: repeat(18, 20px);
+        grid-template-rows: repeat(10, 20px);
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 415px){
+        grid-template-columns: repeat(18, 15px);
+        grid-template-rows: repeat(10, 15px); 
+        font-size: 8px;
+    }
 `
 
 export default ContenedorElementos

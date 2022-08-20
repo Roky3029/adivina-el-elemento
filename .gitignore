@@ -12,6 +12,8 @@ dist-ssr
 *.local
 notes.md
 
+COPIA_SEGURIDAD_TABLA.jsx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

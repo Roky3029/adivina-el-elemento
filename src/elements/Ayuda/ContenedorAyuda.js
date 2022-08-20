@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
-const Form = styled.form`
+const ContenedorAyuda = styled.div`
     width: 100%;
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    height: ${props => props.altura ?? 'auto'}
 `
 
-export default Form
+export default ContenedorAyuda

@@ -4,7 +4,7 @@ import ContenedorFormulario from '../elements/Buscador/ContenedorFormulario'
 import InputFormulario from '../elements/Formulario/InputFormulario'
 import ButtonBuscador from '../elements/Buscador/ButtonBuscador'
 import ListaNAtomico from './arraysDatos/ListaNAtomico'
-import ListaDeElementos from './arraysDatos/ListaDeElementos'
+import ListaInformacion from './arraysDatos/ListaInformacion'
 import ContenedorCoincidenciaError from '../elements/Buscador/ContenedorCoincidenciaError'
 import TituloCoincidenciaError from '../elements/Buscador/TituloCoincidenciaError'
 import LinkCoincidencia from '../elements/Buscador/LinkCoincidencia'
@@ -75,12 +75,12 @@ const PaginaBuscador = () => {
         <InputFormulario value={inputValue} onChange={e => handleChange(e)} placeholder="Busca un elemento..." type="text" list='elementos' />
 
         {valorSwitch === 'nombre' && inputValue !== '' && <datalist id='elementos'>
-          {ListaDeElementos.map((elemento, index) => {
+          {ListaInformacion.map((elemento, index) => {
             return <option key={index} value={elemento.nombre}></option>
           })}
         </datalist>}
         {valorSwitch === 'símbolo' && inputValue !== '' && <datalist id='elementos'>
-          {ListaDeElementos.map((elemento, index) => {
+          {ListaInformacion.map((elemento, index) => {
             return <option key={index} value={elemento.simbolo}></option>
           })}
         </datalist>}

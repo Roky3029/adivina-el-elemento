@@ -6,10 +6,11 @@ import VidasPuntuacion from './components/VidasPuntuacion'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Error404 from './components/Error404'
-// import CommingSoon from './components/CommingSoon'
+import CommingSoon from './components/CommingSoon'
 import TablaPeriodica from './components/TablaPeriodica'
 import Elemento from './components/Elemento'
 import PaginaBuscador from './components/PaginaBuscador'
+import Ayuda from './components/Ayuda'
 
 const App = () => {
   const [puntuacion, cambiarPuntuacion] = useState(0)
@@ -64,6 +65,20 @@ const App = () => {
         <Route path='/buscar' element={
           <>
             <PaginaBuscador />
+            <Footer />
+          </>
+        } />
+
+        <Route path='/ayuda' element={
+          <>
+            <Ayuda />
+            <Footer />
+          </>
+        } />
+
+        <Route path='/comming-soon' element={
+          <>
+            <CommingSoon />
             <Footer />
           </>
         } />

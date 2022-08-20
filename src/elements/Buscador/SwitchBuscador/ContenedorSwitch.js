@@ -10,6 +10,7 @@ const ContenedorSwitch = styled.div`
     height: auto;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 `
 
 export default ContenedorSwitch

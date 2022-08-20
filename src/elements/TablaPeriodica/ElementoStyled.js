@@ -14,7 +14,6 @@ const ElementoStyled = styled(Link)`
     justify-content: center;
     align-items: center;
     margin-top: ${props => props.margintop};
-    cursor: ${props => props.cursor};
 
     @media screen and (max-width: 1480px){
         width: 50px;
@@ -25,6 +24,18 @@ const ElementoStyled = styled(Link)`
         width: 40px;
         height: 40px;  
         font-size: 12px;
+    }
+
+    @media screen and (max-width: 760px){
+        width: 20px;
+        height: 20px;  
+        font-size: 8px;
+    }
+
+    @media screen and (max-width: 415px){
+        width: 15px;
+        height: 15px;  
+        font-size: 8px;
     }
 `
 

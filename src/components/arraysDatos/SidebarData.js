@@ -2,6 +2,7 @@
 import HouseSvg from '/img/house.svg'
 import SearchSvg from '/img/search.svg'
 import TableSvg from '/img/table.svg'
+import HelpSvg from '/img/help.svg'
 
 export const SidebarData = [
   {
@@ -21,5 +22,11 @@ export const SidebarData = [
     path: '/buscar',
     cName: 'nav-text',
     icon: SearchSvg
+  },
+  {
+    title: 'Ayuda',
+    path: '/ayuda',
+    cName: 'nav-text',
+    icon: HelpSvg
   }
 ]

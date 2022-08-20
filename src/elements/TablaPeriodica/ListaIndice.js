@@ -5,7 +5,6 @@ const ListaIndice = styled.ul`
     flex-direction: column;
     flex-wrap: wrap;
     list-style-type: none;
-    margin-left: 3%;
 
     @media screen and (max-width: 1480px){
         flex-direction: row;

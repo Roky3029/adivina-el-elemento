@@ -9,8 +9,10 @@ import PopUpWrong from '../elements/Formulario/PopUpWrong'
 import Simbolo from '../elements/Formulario/Simbolo'
 import elementos from './arraysDatos/ElementosFormulario'
 import SIMBOLO_POSIBILIDADES from './arraysDatos/SimbolosElementos'
+import Loader from './Loader'
 
 const Formulario = ({ aumentarPuntuacion, eliminarVidas, vidas }) => {
+  const [cargando, cambiarCargando] = useState(true)
   const [valorInput, cambiarValorInput] = useState('')
   const [hasAcertado, cambiarHasAcertado] = useState(undefined)
 
@@ -46,6 +48,7 @@ const Formulario = ({ aumentarPuntuacion, eliminarVidas, vidas }) => {
 
       cambiarComprobando(false)
       cambiarInputVacio(false)
+      cambiarCargando(false)
     }, 3000)
   }
 
@@ -70,7 +73,9 @@ const Formulario = ({ aumentarPuntuacion, eliminarVidas, vidas }) => {
 
   return (
     <>
-      <Simbolo className='simbolo'>{simboloElemento}</Simbolo>
+      <Form altura={'150px'}>
+        {cargando ? <Loader /> : <Simbolo className='simbolo'>{simboloElemento}</Simbolo>}
+      </Form>
       <div>
         <Form>
           {vidas !== 0 && <>

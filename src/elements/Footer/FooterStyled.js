@@ -14,7 +14,7 @@ const FooterStyled = styled.footer`
     z-index: 1;
 
     @media screen and (max-width: 670px){
-        top: ${props => props.noTop ? '1300px' : '600px'}
+        top: ${props => props.noTop ? '1300px' : '700px'}
     }
 `
 

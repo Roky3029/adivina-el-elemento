@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { BsGlobe } from 'react-icons/bs'
+import { faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import FooterStyled from '../elements/Footer/FooterStyled'
 import LogoImg from '../elements/Footer/LogoImg'
@@ -20,12 +21,12 @@ const Footer = ({ noTop }) => {
         <a href="https://github.com/Roky3029" target="_blank" rel='noreferrer'>
           <FontAwesomeIcon icon={faGithub} className='social-icon-svg' />
         </a>
-        <a href="https://discord.gg/qkPun79h2y" target="_blank" rel='noreferrer'>
-          <FontAwesomeIcon icon={faDiscord} className='social-icon-svg' />
+        <a href="/comming-soon" target="_blank" rel='noreferrer'>
+          <BsGlobe className='social-icon-svg' />
         </a>
       </SocialIconContainer>
       <Copyright>Roky &copy; 2022. Todos los derechos reservados</Copyright>
-      <Version>Version 2.0.1</Version>
+      <Version>Version 2.2.0 </Version>
     </FooterStyled>
   )
 }
