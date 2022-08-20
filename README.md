@@ -26,18 +26,18 @@ Además de el juego de Adivina El Elemento, la página también cuenta con otras
 ### CAMBIOS DE AEE:
 
 Cambios de la versión 2.2.0: 
--> Añadida la sección de "Ayuda"
--> Habilitada la tabla periódica para todo tipo de dispositivos
--> Se ha añadido a la información del elemento el grupo al que pertenece
--> Se ha añadido un loader mientras se genera el primer elemento
--> Se ha modificado la apariencia del botón de "comprobar"
+-> Añadida la sección de "Ayuda" <br>
+-> Habilitada la tabla periódica para todo tipo de dispositivos <br>
+-> Se ha añadido a la información del elemento el grupo al que pertenece <br>
+-> Se ha añadido un loader mientras se genera el primer elemento <br>
+-> Se ha modificado la apariencia del botón de "comprobar" <br>
 
 Futuros cambios de AEE (no son seguros que salgan, solo son ideas que tengo):
 
--> Realizar una refactorización del código
--> Migrar el proyecto de Styled Components a TailwindCSS
--> Añadir funcionalidades como una paleta de comandos
--> Mejoras en la experiencia de usuario
+-> Realizar una refactorización del código <br> 
+-> Migrar el proyecto de Styled Components a TailwindCSS <br>
+-> Añadir funcionalidades como una paleta de comandos <br>
+-> Mejoras en la experiencia de usuario <br>
 
 
 ### Mis redes sociales
