@@ -25,7 +25,7 @@ Además de el juego de Adivina El Elemento, la página también cuenta con otras
 
 ### CAMBIOS DE AEE:
 
-Cambios de la versión 2.2.0: 
+Cambios de la versión 2.2.0: <br>
 -> Añadida la sección de "Ayuda" <br>
 -> Habilitada la tabla periódica para todo tipo de dispositivos <br>
 -> Se ha añadido a la información del elemento el grupo al que pertenece <br>

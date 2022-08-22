@@ -9,7 +9,7 @@ import PreguntasAyuda from './arraysDatos/PreguntasAyuda'
 const Ayuda = () => {
   return (
     <>
-      <ContenedorAyuda>
+      <ContenedorAyuda mbottom>
         <TituloAyuda>Ayuda</TituloAyuda>
 
         <ContenedorPreguntas>
@@ -21,8 +21,7 @@ const Ayuda = () => {
           })}
         </ContenedorPreguntas>
       </ContenedorAyuda>
-
-      <Creditos>Para mas información, visita <a href='https://github.com/Roky3029/adivina-el-elemento/blob/main/README.md'>el repositorio en Github</a></Creditos>
+      <Creditos>Para mas información, visita <a href='https://github.com/Roky3029/adivina-el-elemento/blob/main/README.md'>el repositorio de github</a></Creditos>
     </>
   )
 }

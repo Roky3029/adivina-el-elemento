@@ -3,8 +3,7 @@ import styled from 'styled-components'
 const Creditos = styled.p`
     width: 100%;
     text-align: center;
-    position: relative;
-    top: 200px;
+    display: block;
     opacity: .3;
 `
 
