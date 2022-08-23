@@ -19,7 +19,7 @@ Adivina El Elemento esta hecho con estas tecnologias:
 
 Además de el juego de Adivina El Elemento, la página también cuenta con otras secciones para que puedas aprenderte los elementos y así aumentar tu puntuación en el juego, dichas secciones son: 
 
-- Tabla periódica -> Aquí podras ver una tabla periódica y si pinchas en algún elemento, podrás ver información interesante, además de una imagen del elemento en cuestión (NOTA: Actualmente, por motivos técnicos, la tabla periódica no esta disponible en dispositivos móviles (menos de 840px de anchura), solo está disponible para ordenadores)
+- Tabla periódica -> Aquí podras ver una tabla periódica y si pinchas en algún elemento, podrás ver información interesante, además de una imagen del elemento en cuestión
 
 - Buscador -> Aquí podrás buscar el nombre del elemento o el símbolo para que puedas ver información del elemento que has buscado. Cuenta con búsqueda por símbolo o búsqueda por nombre
 
@@ -48,7 +48,7 @@ Hey 👋, soy Roky, y si te gustan mis páginas puedes seguirme en algunas de mi
 <br>
 [Github](https://github.com/Roky3029) 🐈
 <br>
-[Discord](https://discord.gg/qkPun79h2y) 🎤
+Discord (No disponible actualmente) 🎤
 (Puede que en Discord se publiquen características que llegarán en un futuro a Adivina El Elemento 👀)
 
 ###### ❗ El objetivo de Adivina El Elemento es aprender los elementos de la tabla periódica de una manera divertida :D
