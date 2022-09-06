@@ -1,6 +1,6 @@
 const PreguntasAyuda = [
   {
-    pregunta: '🤔 ¿De que va Adivina El Elemento?',
+    pregunta: '❓ ¿De que va Adivina El Elemento?',
     respuesta: 'Adivina El Elemento es una página construida para hacer el aprendizaje de los elementos de la tabla periódica un juego y el principal objetivo es que aprendas jugando. Te iran apareciendo distintos símbolos de elementos químicos y tendras que escribir en el campo de texto el elemento al que pertenece'
   },
   {

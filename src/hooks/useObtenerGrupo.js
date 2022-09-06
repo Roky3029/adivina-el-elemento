@@ -4,43 +4,43 @@ const useObtenerGrupo = (grupo) => {
 
   switch (grupo) {
     case 'no-metales':
-      colorFondo = '#30d23f'
+      colorFondo = 'bg-elementos-nm'
       grupoPerteneciente = 'No metales'
       break
     case 'alcalinos':
-      colorFondo = '#614838'
+      colorFondo = 'bg-elementos-ma'
       grupoPerteneciente = 'Metales alcalinos'
       break
     case 'alcalinoterreos':
-      colorFondo = '#e7b22d'
+      colorFondo = 'bg-elementos-mat'
       grupoPerteneciente = 'Metales alcalinotérreos'
       break
     case 'metales-transicion':
-      colorFondo = '#b5ab94'
+      colorFondo = 'bg-elementos-mt'
       grupoPerteneciente = 'Metales de transición'
       break
     case 'lantanidos':
-      colorFondo = '#ee75ff'
+      colorFondo = 'bg-elementos-la'
       grupoPerteneciente = 'Lantánidos'
       break
     case 'actinidos':
-      colorFondo = '#ff00f7'
+      colorFondo = 'bg-elementos-ac'
       grupoPerteneciente = 'Actínidos'
       break
     case 'metales-p':
-      colorFondo = '#a2c49d'
+      colorFondo = 'bg-elementos-mp'
       grupoPerteneciente = 'Metales del bloque "p"'
       break
     case 'metaloides':
-      colorFondo = '#2f8a21'
+      colorFondo = 'bg-elementos-ml'
       grupoPerteneciente = 'Metaloides'
       break
     case 'halogenos':
-      colorFondo = '#9be2e3'
+      colorFondo = 'bg-elementos-ha'
       grupoPerteneciente = 'Halógenos'
       break
     case 'gases-nobles':
-      colorFondo = '#0f63ec'
+      colorFondo = 'bg-elementos-gn'
       grupoPerteneciente = 'Gases nobles'
       break
     default:

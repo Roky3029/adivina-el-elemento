@@ -9,8 +9,7 @@ No te preocupes, si fallas un elemento no perderás, pero ten cuidado porque **c
 Adivina El Elemento esta hecho con estas tecnologias:
 
 - ReactJs
-- Styled Components
-- CSS
+- TailwindCSS
 - ViteJS
 - React Router
 - Vercel (Host)
@@ -19,25 +18,25 @@ Adivina El Elemento esta hecho con estas tecnologias:
 
 Además de el juego de Adivina El Elemento, la página también cuenta con otras secciones para que puedas aprenderte los elementos y así aumentar tu puntuación en el juego, dichas secciones son: 
 
-- Tabla periódica -> Aquí podras ver una tabla periódica y si pinchas en algún elemento, podrás ver información interesante, además de una imagen del elemento en cuestión
+- Tabla periódica -> Aquí podras ver una tabla periódica y si pinchas en algún elemento, podrás ver información interesante, además de una imagen del elemento en cuestión. **Si pinchas en alguno de los filtros al lado de la tabla, podrás ver los elementos de cada grupo mostrados en la misma tabla
 
 - Buscador -> Aquí podrás buscar el nombre del elemento o el símbolo para que puedas ver información del elemento que has buscado. Cuenta con búsqueda por símbolo o búsqueda por nombre
 
+- Categorias -> En estas secciones podras ver todos los elementos que pertenecen a cada grupo de la tabla periódica, ideal si estas aprendiendo los elementos de un grupo en concreto
+
 ### CAMBIOS DE AEE:
 
-Cambios de la versión 2.2.0: <br>
--> Añadida la sección de "Ayuda" <br>
--> Habilitada la tabla periódica para todo tipo de dispositivos <br>
--> Se ha añadido a la información del elemento el grupo al que pertenece <br>
--> Se ha añadido un loader mientras se genera el primer elemento <br>
--> Se ha modificado la apariencia del botón de "comprobar" <br>
+Cambios de la versión 2.3.0: <br>
+-> Se han pasado todos los estilos de la web a TailwindCSS <br>
+-> Se han realizado mejoras en el footer <br>
+-> Se ha añadido el sistema de filtros en la tabla periódica <br>
+-> Se ha agregado la sección para ver todos los elementos de un grupo <br>
+-> Cambios menores al diseño y solución de algunos bugs <br>
 
 Futuros cambios de AEE (no son seguros que salgan, solo son ideas que tengo):
 
 -> Realizar una refactorización del código <br> 
--> Migrar el proyecto de Styled Components a TailwindCSS <br>
--> Añadir funcionalidades como una paleta de comandos <br>
--> Mejoras en la experiencia de usuario <br>
+-> Añadir funcionalidades como una paleta de comandos o Modo Oscuro <br>
 
 
 ### Mis redes sociales
@@ -49,6 +48,5 @@ Hey 👋, soy Roky, y si te gustan mis páginas puedes seguirme en algunas de mi
 [Github](https://github.com/Roky3029) 🐈
 <br>
 Discord (No disponible actualmente) 🎤
-(Puede que en Discord se publiquen características que llegarán en un futuro a Adivina El Elemento 👀)
 
 ###### ❗ El objetivo de Adivina El Elemento es aprender los elementos de la tabla periódica de una manera divertida :D

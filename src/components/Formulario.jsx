@@ -1,12 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
-
-import ButtonFormulario from '../elements/Formulario/ButtonFormulario'
-import Form from '../elements/Formulario/Form'
-import InputFormulario from '../elements/Formulario/InputFormulario'
-import PopUpCorrect from '../elements/Formulario/PopUpCorrect'
-import PopUpWrong from '../elements/Formulario/PopUpWrong'
-import Simbolo from '../elements/Formulario/Simbolo'
 import elementos from './arraysDatos/ElementosFormulario'
 import SIMBOLO_POSIBILIDADES from './arraysDatos/SimbolosElementos'
 import Loader from './Loader'
@@ -72,24 +65,21 @@ const Formulario = ({ aumentarPuntuacion, eliminarVidas, vidas }) => {
   }, [])
 
   return (
-    <>
-      <Form altura={'150px'}>
-        {cargando ? <Loader /> : <Simbolo className='simbolo'>{simboloElemento}</Simbolo>}
-      </Form>
-      <div>
-        <Form>
-          {vidas !== 0 && <>
-            <InputFormulario type="text" value={valorInput} onChange={e => handleInput(e)} placeholder='Escribe el elemento...' />
-            <ButtonFormulario onClick={e => handleSubmit(e)} type='submit' disabled={comprobando}>Comprobar</ButtonFormulario>
-          </>
-          }
-        </Form>
+    <div className='space-y-16 pt-5 flex flex-col items-center justify-between'>
+      <div className='h-24 grid place-content-center'>
+        {cargando ? <Loader /> : <p className='text-4xl font-semibold text-center '>{simboloElemento}</p>}
       </div>
 
-      {hasAcertado && <PopUpCorrect className='popup-result correct'>Has acertado</PopUpCorrect>}
-      {hasAcertado === false && <PopUpWrong className='popup-result wrong'>No has acertado, el elemento correcto era <b>{elemento}</b></PopUpWrong>}
-      {inputVacio && <PopUpWrong className='popup-result wrong'>Campo de texto vacio. No suma puntos al marcador</PopUpWrong>}
-    </>
+      {vidas !== 0 &&
+        <form className='text-center md:space-x-20 space-y-5 md:space-y-0 flex flex-col space-x-0 md:flex-row items-center justify-center pb-10'>
+          <input type="text" value={valorInput} onChange={e => handleInput(e)} placeholder='Escribe el elemento...' className='p-5 rounded-lg text-xl outline-none' />
+          <button className='px-10 py-5 bg-emerald-200 rounded-xl shadow-sm text-lg font-semibold transition-all hover:scale-105 hover:bg-emerald-300' onClick={e => handleSubmit(e)} disabled={comprobando}>Comprobar</button>
+        </form>
+      }
+      {hasAcertado && <p className='text-center text-4xl text-green-600'>¡Has acertado 🎉!</p>}
+      {hasAcertado === false && <p className='text-center text-4xl text-red-500'>No has acertado, el elemento correcto era <span className='font-extrabold'>{elemento}</span></p>}
+      {inputVacio && <p className='text-center text-4xl text-red-500'>Campo de texto vacio. No suma puntos al marcador</p>}
+    </div>
   )
 }
 

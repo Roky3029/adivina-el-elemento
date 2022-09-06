@@ -1,15 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFlask } from '@fortawesome/free-solid-svg-icons'
-
-import ContenedorVidas from '../elements/Vidas/ContenedorVidas'
-import TextoVidas from '../elements/Vidas/TextoVidas'
-import HasPerdidoContenedor from '../elements/Vidas/HasPerdidoContenedor'
-import ResetearButton from '../elements/Vidas/ResetearButton'
-import Marcador from '../elements/Vidas/Marcador'
-import ContenedorIconos from './../elements/Vidas/ContenedorIconos'
-import HasPerdidoTexto from '../elements/Vidas/HasPerdidoTexto'
+import { FaFlask } from 'react-icons/fa'
 
 const VidasPuntuacion = ({ vidas, cambiarVidas, cambiarPuntuacion, puntuacion }) => {
   const resetearValores = () => {
@@ -18,24 +9,24 @@ const VidasPuntuacion = ({ vidas, cambiarVidas, cambiarPuntuacion, puntuacion })
   }
 
   return (
-    <>
-      <Marcador>Puntuacion actual: <b>{puntuacion}</b></Marcador>
-      <ContenedorVidas>
-        {vidas !== 0 && <TextoVidas>Vidas: </TextoVidas>}
+    <div className='pt-10 grid place-content-center'>
+      <p className='text-3xl text-center'>Puntuación {vidas !== 0 ? 'actual' : 'final'}: <span className='font-bold'>{puntuacion}</span></p>
+      <div className='py-10 grid place-content-center'>
+          {vidas !== 0 && <p className='text-center text-4xl'>Vidas: </p>}
 
-        <ContenedorIconos>
-          {vidas > 2 && <FontAwesomeIcon icon={faFlask} className="matraz" />}
-          {vidas > 1 && <FontAwesomeIcon icon={faFlask} className="matraz" />}
-          {vidas > 0 && <FontAwesomeIcon icon={faFlask} className={`matraz ${vidas === 1 ? 'beat' : 'no-beat'}`} />}
-        </ContenedorIconos>
+          <div className='flex text-4xl py-6 space-x-10 items-center justify-center'>
+            {vidas > 2 && <FaFlask />}
+            {vidas > 1 && <FaFlask />}
+            {vidas > 0 && <FaFlask className={`${vidas === 1 ? 'animate-flask-beat' : ''}`} />}
+          </div>
 
-        {vidas <= 0 && <HasPerdidoContenedor>
-          <HasPerdidoTexto>Has perdido todos los matraces</HasPerdidoTexto>
-          <ResetearButton onClick={resetearValores}>Pincha aqui para resetear</ResetearButton>
-        </HasPerdidoContenedor>
+        {vidas === 0 && <div className='flex flex-col text-4xl py-6 space-y-10 items-center justify-center'>
+          <p className='text-red-600'>Has perdido todos los matraces</p>
+          <button className="px-10 py-5 bg-amber-300 rounded-xl shadow-sm text-lg font-semibold transition-all hover:scale-105 hover:bg-amber-400" onClick={resetearValores}>Pincha aqui para resetear</button>
+        </div>
         }
-      </ContenedorVidas>
-    </>
+      </div>
+    </div>
   )
 }
 

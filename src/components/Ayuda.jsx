@@ -1,28 +1,25 @@
 import React from 'react'
-import ContenedorAyuda from '../elements/Ayuda/ContenedorAyuda'
-import ContenedorPreguntas from '../elements/Ayuda/ContenedorPreguntas'
-import Pregunta from '../elements/Ayuda/Pregunta'
-import TituloAyuda from '../elements/Ayuda/TituloAyuda'
-import Creditos from '../elements/Elemento/Creditos'
 import PreguntasAyuda from './arraysDatos/PreguntasAyuda'
 
 const Ayuda = () => {
   return (
-    <>
-      <ContenedorAyuda mbottom>
-        <TituloAyuda>Ayuda</TituloAyuda>
+    <div className='flex flex-col items-center justify-center pt-24 md:pt-0'>
+      <div className='flex flex-col justify-center items-center'>
+        <h2 className='text-2xl font-extrabold'>Ayuda</h2>
 
-        <ContenedorPreguntas>
+        <div className='w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10 m-10'>
           {PreguntasAyuda.map((pregunta, index) => {
-            return <Pregunta key={index}>
-              <TituloAyuda nobigfz>{pregunta.pregunta}</TituloAyuda>
+            return <div key={index} className='bg-amber-200 py-4 px-7 space-y-5 rounded-lg shadow-md'>
+              <h2 className='text-center font-bold'>{pregunta.pregunta}</h2>
               <p>{pregunta.respuesta}</p>
-            </Pregunta>
+            </div>
           })}
-        </ContenedorPreguntas>
-      </ContenedorAyuda>
-      <Creditos>Para mas información, visita <a href='https://github.com/Roky3029/adivina-el-elemento/blob/main/README.md'>el repositorio de github</a></Creditos>
-    </>
+        </div>
+      </div>
+      <p className='text-gray-400 text-center'>
+        Para mas informacion <a href="https://github.com/Roky3029/adivina-el-elemento/blob/main/README.md" className='block underline transition-all hover:text-gray-500'>visita el repositorio de github</a>
+      </p>
+    </div>
   )
 }
 

@@ -1,28 +1,25 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import ContenedorIconos from '../elements/CommingSoon/ContenedorIconos'
-import ContenedorSoon from '../elements/CommingSoon/ContenedorSoon'
-import TituloSoon from '../elements/CommingSoon/TituloSoon'
 
 const CommingSoon = () => {
   return (
-    <>
+    <div className='w-full min-h-screen flex flex-col items-center justify-center'>
       <Helmet>
         <title>Trabajando en ello... | AEE</title>
       </Helmet>
 
-      <ContenedorSoon>
-        <TituloSoon>Trabajando en ello...</TituloSoon>
-        <ContenedorIconos>
+      <div className='bg-teal-100 p-10 rounded-lg shadow-lg flex flex-col items-center justify-center'>
+        <h2 className='text-2xl animate-pulse'>Trabajando en ello...</h2>
+        <div>
           <lord-icon
             src="https://cdn.lordicon.com/pndvzexs.json"
             trigger="loop"
             delay="1000"
             style={{ width: '250px', height: '250px' }}>
           </lord-icon>
-        </ContenedorIconos>
-      </ContenedorSoon>
-    </>
+        </div>
+      </div>
+    </div>
   )
 }
 

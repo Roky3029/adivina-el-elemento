@@ -1,25 +1,25 @@
 import React from 'react'
-import Contenedor404 from '../elements/Error404/Contenedor404'
-import Imagen404 from '../elements/Error404/Imagen404'
-import Titulo404 from '../elements/Error404/Titulo404'
-import Texto404 from '../elements/Error404/Texto404'
-import Redireccion404 from '../elements/Error404/Redireccion404'
-import Enlace404 from '../elements/Error404/Enlace404'
 import { Helmet } from 'react-helmet'
+import { BsArrowReturnLeft } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const Error404 = () => {
   return (
-    <>
+    <div className='w-full min-h-screen'>
       <Helmet>
         <title>No encontrado | AEE</title>
       </Helmet>
-      <Contenedor404>
-        <Imagen404 src="./../../public/img/broken-flask.png" alt='Matraz roto' />
-        <Titulo404>Oh, vaya</Titulo404>
-        <Texto404>Parece que la página que has buscado no existe</Texto404>
-        <Redireccion404>Prueba a <Enlace404 href="/">volver al inicio</Enlace404></Redireccion404>
-      </Contenedor404>
-    </>
+
+      <div className='text-center text-2xl flex flex-col items-center justify-center'>
+        <img className="w-96" src="/img/broken-flask.png" alt='Matraz roto' />
+        <h2>¡Oh, vaya!</h2>
+        <p>Parece que la página que has buscado no existe</p>
+        <Link className="mt-36 flex items-center space-x-5 p-5 rounded bg-teal-200 transition-all hover:bg-teal-300 hover:scale-105" to='/'>
+          <BsArrowReturnLeft />
+          <span>Volver al inicio</span>
+        </Link>
+      </div>
+    </div>
   )
 }
 

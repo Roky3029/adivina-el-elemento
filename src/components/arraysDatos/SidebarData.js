@@ -6,27 +6,31 @@ import HelpSvg from '/img/help.svg'
 
 export const SidebarData = [
   {
+    id: 1,
     title: 'Inicio',
     path: '/',
-    cName: 'nav-text',
-    icon: HouseSvg
+    icon: HouseSvg,
+    dropdown: false
   },
   {
+    id: 2,
     title: 'Tabla periodica',
     path: '/tabla',
-    cName: 'nav-text',
-    icon: TableSvg
+    icon: TableSvg,
+    dropdown: false
   },
   {
+    id: 3,
     title: 'Buscador',
     path: '/buscar',
-    cName: 'nav-text',
-    icon: SearchSvg
+    icon: SearchSvg,
+    dropdown: false
   },
   {
+    id: 4,
     title: 'Ayuda',
     path: '/ayuda',
-    cName: 'nav-text',
-    icon: HelpSvg
+    icon: HelpSvg,
+    dropdown: false
   }
 ]

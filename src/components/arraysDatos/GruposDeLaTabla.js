@@ -1,14 +1,14 @@
 const gruposDeLaTabla = [
-  { grupo: 'No Metales', color: '#30d23f' },
-  { grupo: 'Metales alcalinos', color: '#614838' },
-  { grupo: 'Metales alcalinotérreos', color: '#e7b22d' },
-  { grupo: 'Metales de transición', color: '#b5ab94' },
-  { grupo: 'Lantánidos', color: '#ee75ff' },
-  { grupo: 'Actínidos', color: '#ff00f7' },
-  { grupo: 'Metales del bloque "p"', color: '#a2c49d' },
-  { grupo: 'Metaloides', color: '#2f8a21' },
-  { grupo: 'Halógenos', color: '#9be2e3' },
-  { grupo: 'Gases nobles', color: '#0f63ec' }
+  { grupo: 'No Metales', color: 'bg-elementos-nm', grupoLowerCase: 'no-metales' },
+  { grupo: 'Metales alcalinos', color: 'bg-elementos-ma', grupoLowerCase: 'alcalinos' },
+  { grupo: 'Metales alcalinotérreos', color: 'bg-elementos-mat', grupoLowerCase: 'alcalinoterreos' },
+  { grupo: 'Metales de transición', color: 'bg-elementos-mt', grupoLowerCase: 'metales-transicion' },
+  { grupo: 'Lantánidos', color: 'bg-elementos-la', grupoLowerCase: 'lantanidos' },
+  { grupo: 'Actínidos', color: 'bg-elementos-ac', grupoLowerCase: 'actinidos' },
+  { grupo: 'Metales del bloque "p"', color: 'bg-elementos-mp', grupoLowerCase: 'metales-p' },
+  { grupo: 'Metaloides', color: 'bg-elementos-ml', grupoLowerCase: 'metaloides' },
+  { grupo: 'Halógenos', color: 'bg-elementos-ha', grupoLowerCase: 'halogenos' },
+  { grupo: 'Gases nobles', color: 'bg-elementos-gn', grupoLowerCase: 'gases-nobles' }
 ]
 
 export default gruposDeLaTabla

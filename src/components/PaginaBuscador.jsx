@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import ContenedorFormulario from '../elements/Buscador/ContenedorFormulario'
-import InputFormulario from '../elements/Formulario/InputFormulario'
-import ButtonBuscador from '../elements/Buscador/ButtonBuscador'
 import ListaNAtomico from './arraysDatos/ListaNAtomico'
 import ListaInformacion from './arraysDatos/ListaInformacion'
-import ContenedorCoincidenciaError from '../elements/Buscador/ContenedorCoincidenciaError'
-import TituloCoincidenciaError from '../elements/Buscador/TituloCoincidenciaError'
-import LinkCoincidencia from '../elements/Buscador/LinkCoincidencia'
 import SwitcherBuscador from './SwitcherBuscador'
 import ListaNAtomicoSimbolo from './arraysDatos/ListaNAtomicoSimbolo'
+import { Link } from 'react-router-dom'
 
 const PaginaBuscador = () => {
   const [inputValue, cambiarInputValue] = useState('')
@@ -66,13 +61,13 @@ const PaginaBuscador = () => {
   }, [inputValue])
 
   return (
-    <>
+    <div className='pt-20'>
       <Helmet>
         <title>Buscar | AEE</title>
       </Helmet>
 
-      <ContenedorFormulario>
-        <InputFormulario value={inputValue} onChange={e => handleChange(e)} placeholder="Busca un elemento..." type="text" list='elementos' />
+      <form className='flex flex-col md:flex-row items-center justify-center pt-10 space-y-5 md:space-y-0 md:space-x-10'>
+        <input value={inputValue} onChange={e => handleChange(e)} placeholder="Busca un elemento..." type="text" list='elementos' className='p-5 rounded-lg text-xl outline-none'/>
 
         {valorSwitch === 'nombre' && inputValue !== '' && <datalist id='elementos'>
           {ListaInformacion.map((elemento, index) => {
@@ -84,31 +79,31 @@ const PaginaBuscador = () => {
             return <option key={index} value={elemento.simbolo}></option>
           })}
         </datalist>}
-        <ButtonBuscador onClick={e => handleSubmit(e)}>Buscar elemento</ButtonBuscador>
-      </ContenedorFormulario>
+        <button onClick={e => handleSubmit(e)} className="px-10 py-5 bg-emerald-200 rounded-xl shadow-sm text-lg font-semibold transition-all hover:scale-105 hover:bg-emerald-300">Buscar elemento</button>
+      </form>
 
       {hasBuscado &&
-        <ContenedorCoincidenciaError>
-          <TituloCoincidenciaError>Se ha encontrado un elemento:</TituloCoincidenciaError>
-          <LinkCoincidencia to={`/elemento/${nAtomicoCoincidente}`}>{inputValue}</LinkCoincidencia>
-        </ContenedorCoincidenciaError>
+        <div className='flex flex-col text-center items-center justify-between text-2xl py-10 space-y-10'>
+          <h3>Se ha encontrado un elemento:</h3>
+          <Link className='font-bold text-3xl bg-amber-300 rounded-lg py-3 px-6 transition-all hover:scale-105 hover:bg-amber-200' to={`/elemento/${nAtomicoCoincidente}`}>{inputValue}</Link>
+        </div>
       }
 
       {error &&
-        <ContenedorCoincidenciaError>
+        <div className='flex flex-col text-center items-center justify-between text-2xl py-10 space-y-10'>
           <lord-icon
             src="https://cdn.lordicon.com/otyynlki.json"
             trigger="loop"
             delay="1500"
             style={{ width: '100px', height: '100px' }}>
           </lord-icon>
-          <TituloCoincidenciaError>No se ha encontrado un elemento coincidente o el campo de texto esta vacio</TituloCoincidenciaError>
-          <TituloCoincidenciaError>Prueba de nuevo con otro elemento</TituloCoincidenciaError>
-        </ContenedorCoincidenciaError>
+          <h3>No se ha encontrado un elemento coincidente o el campo de texto esta vacio</h3>
+          <h3>Prueba de nuevo con otro elemento</h3>
+        </div>
       }
 
       <SwitcherBuscador valorSwitch={valorSwitch} cambiarValorSwitch={cambiarValorSwitch} />
-    </>
+    </div>
   )
 }
 
