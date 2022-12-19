@@ -23,8 +23,8 @@ const Categoria = () => {
                   <p className='text-sm md:text-base'>Número atomico: {elemento.numeroAtomico}</p>
                 </div>
                 <div className='w-1/4 pr-2'>
-                  <p className='flex justify-between text-xs md:text-base'>Columna: <span className='font-semibold'>{elemento.yPos}</span></p>
-                  <p className='flex justify-between text-xs md:text-base'>Fila: <span className='font-semibold'>{elemento.xPos > 8 ? elemento.xPos - 1 : elemento.xPos}</span></p>
+                  <p className='flex justify-between text-xs md:text-base'>Grupo: <span className='font-semibold'>{elemento.yPos}</span></p>
+                  <p className='flex justify-between text-xs md:text-base'>Periodo: <span className='font-semibold'>{elemento.xPos > 8 ? elemento.xPos - 1 : elemento.xPos}</span></p>
                 </div>
               </Link>
             })}

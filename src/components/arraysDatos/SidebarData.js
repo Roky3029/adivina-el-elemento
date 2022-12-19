@@ -3,6 +3,7 @@ import HouseSvg from '/img/house.svg'
 import SearchSvg from '/img/search.svg'
 import TableSvg from '/img/table.svg'
 import HelpSvg from '/img/help.svg'
+import QuizSvg from '/img/quiz.svg'
 
 export const SidebarData = [
   {
@@ -31,6 +32,13 @@ export const SidebarData = [
     title: 'Ayuda',
     path: '/ayuda',
     icon: HelpSvg,
+    dropdown: false
+  },
+  {
+    id: 5,
+    title: 'Quiz',
+    path: '/quiz-tabla',
+    icon: QuizSvg,
     dropdown: false
   }
 ]

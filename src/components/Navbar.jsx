@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-emerald-600 h-20 hidden justify-between z-10 shadow mb-5 lg:flex">
+      <nav className="bg-emerald-600 h-20 hidden justify-between z-50 shadow mb-5 lg:flex">
 
         <Link to="/" className='flex items-center pl-40 space-x-5'>
           <img src="/img/logo.png" alt="" className='w-12 h-12'/>

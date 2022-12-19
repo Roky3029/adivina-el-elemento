@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import IndiceTablaPeriodica from './IndiceTablaPeriodica'
 import { Helmet } from 'react-helmet'
-import useObtenerGrupo from '../hooks/useObtenerGrupo'
-import ListaInformacion from './arraysDatos/ListaInformacion'
+// import useObtenerGrupo from '../hooks/useObtenerGrupo'
+// import ListaInformacion from './arraysDatos/ListaInformacion'
 import gruposDeLaTabla from './arraysDatos/GruposDeLaTabla'
+import TablaBase from './TablaBase'
 
-const TablaPeriodica = () => {
+const TablaPeriodica = ({ quiz }) => {
   const [filtrarElementos, cambiarFiltrarElementos] = useState()
 
   return (
@@ -21,7 +22,7 @@ const TablaPeriodica = () => {
       </div>
 
       <div className='flex items-center justify-center flex-col xl:flex-row space-x-0 md:space-x-10'>
-        <div className='grid grid-cols-elementosSM md:grid-cols-elementosMD lg:grid-cols-elementosLG xl:grid-cols-elementosXL grid-rows-elementosSM md:grid-rows-elementosMD lg:grid-rows-elementosLG xl:grid-rows-elementosXL gap-1'>
+        {/* <div className='grid grid-cols-elementosSM md:grid-cols-elementosMD lg:grid-cols-elementosLG xl:grid-cols-elementosXL grid-rows-elementosSM md:grid-rows-elementosMD lg:grid-rows-elementosLG xl:grid-rows-elementosXL gap-1'>
           {ListaInformacion.map(elemento => {
             const [colorFondo] = useObtenerGrupo(elemento.grupo)
             return <Link to={`/elemento/${elemento.numeroAtomico}`} key={elemento.numeroAtomico} className={`grid place-content-center text-xs font-normal md:text-lg text-white md:font-bold transition-all ${filtrarElementos === elemento.grupo || !filtrarElementos ? `${colorFondo}` : 'bg-slate-400 text-slate-300'}`}
@@ -33,7 +34,8 @@ const TablaPeriodica = () => {
           })
 
           }
-        </div>
+        </div> */}
+        <TablaBase filtrarElementos={filtrarElementos}/>
 
         <IndiceTablaPeriodica filtrarElementos={filtrarElementos} cambiarFiltrarElementos={cambiarFiltrarElementos} />
 

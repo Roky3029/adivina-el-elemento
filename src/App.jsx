@@ -14,6 +14,7 @@ import PaginaBuscador from './components/PaginaBuscador'
 import Ayuda from './components/Ayuda'
 import Categoria from './components/Categoria'
 import Quiz from './components/Quiz'
+import QuizTabla from './components/QuizTabla'
 import UseScrollToTop from './hooks/useScrollToTop'
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           } />
 
           <Route path='/comming-soon' element={<CommingSoon />} />
+          <Route path='/quiz-tabla' element={<QuizTabla />} />
 
         </Routes>
       </main>

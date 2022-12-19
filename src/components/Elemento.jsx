@@ -19,6 +19,7 @@ const Elemento = () => {
 
   const [colorFondo, grupoPerteneciente] = useObtenerGrupo(objectoCoincidente.grupo)
 
+  const noDataStyles = 'md:w-1/2 bg-amber-200 rounded-lg shadow-md flex flex-col items-center'
   return (
     <div className=''>
       <Helmet>
@@ -45,7 +46,7 @@ const Elemento = () => {
             </div>
             <div className='flex mx-10 flex-col md:flex-row md:justify-between gap-10'>
 
-              <div className='md:w-1/2 bg-amber-200 rounded-lg shadow-md flex flex-col items-center'>
+              <div className={noDataStyles}>
                 <h3 className='font-semibold pt-4 text-2xl border-b border-b-amber-300'>Información del elemento</h3>
                 <p className='p-10'>{objectoCoincidente.informacion.length === 0 ? `¡Ups! No hemos encontrado información del elemento ${objectoCoincidente.nombre}. Pero pronto la habrá.` : objectoCoincidente.informacion}</p>
 
