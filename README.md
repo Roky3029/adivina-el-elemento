@@ -26,18 +26,15 @@ Además de el juego de Adivina El Elemento, la página también cuenta con otras
 
 ### CAMBIOS DE AEE:
 
-Cambios de la versión 2.3.0: <br>
--> Se han pasado todos los estilos de la web a TailwindCSS <br>
--> Se han realizado mejoras en el footer <br>
--> Se ha añadido el sistema de filtros en la tabla periódica <br>
--> Se ha agregado la sección para ver todos los elementos de un grupo <br>
--> Cambios menores al diseño y solución de algunos bugs <br>
+Cambios de la versión 3.0.0: <br>
+-> Presentamos el ¡QUIZ! Una nueva sección de AEE en la que pondrás a prueba tu conocimiento de toda la tabla periodica. <br>
+-> Añadida algo de decoración navideña para celebrar la Navidad <br>
+-> Realizados algunos cambios a ciertos componentes <br>
+-> Errores solucionados <br>
 
-Futuros cambios de AEE (no son seguros que salgan, solo son ideas que tengo):
+### Reporte de errores:
 
--> Realizar una refactorización del código <br> 
--> Añadir funcionalidades como una paleta de comandos o Modo Oscuro <br>
-
+Si encuentras algun error en AEE, te agradecería que lo colocaras en una issue de Github o que me la mandaras por alguna de mis redes sociales para que lo pueda arreglar con la mayor brevedad posible. Para que sepa exactamente el error, informen los errores con un titulo, una descripción y alguna imagen si es necesario.
 
 ### Mis redes sociales
 
