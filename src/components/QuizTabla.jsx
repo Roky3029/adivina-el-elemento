@@ -35,7 +35,7 @@ const QuizTabla = () => {
       cambiarElementosAcertados([...elementosAcertados, ListaNAtomico[limpio]])
       cambiarInputValue('')
       console.log(elementosAcertados.length)
-      if (elementosAcertados.length === 1) {
+      if (elementosAcertados.length === 117) {
         changeShow(true)
         changeShowReason('win')
         pause()
