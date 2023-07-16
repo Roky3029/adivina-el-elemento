@@ -18,7 +18,7 @@ const Footer = () => {
         </a>
       </div>
       <p className='text-lg font-semibold text-gray-500 mt-10 text-center'>Roky &copy; 2022. Todos los derechos reservados</p>
-      <p className='w-full text-slate-500 text-right pr-10'>Version 3.5.0 </p>
+      <p className='w-full text-slate-500 text-right pr-10'>Version 3.5.1 </p>
     </footer>
   )
 }

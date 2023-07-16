@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 import useObtenerGrupo from '../hooks/useObtenerGrupo'
 import Information from '../components/Information'
 import Loader from '../components/Loader'
-import { useTransformarEstado, useTransformarYearAntiguo } from '../hooks/useTransformarDatos'
+import { useTransformarEstado, useTransformarYearAntiguo, useSetNoDefinedValue } from '../hooks/useTransformarDatos'
 
 const Elemento = () => {
   const [datos, setDatos] = useState({})
@@ -62,14 +62,14 @@ const Elemento = () => {
                 <h3 className='text-3xl font-bold border-b-2 border-b-slate-500'>Datos del {objectoCoincidente.nombre}</h3>
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
                   <Information text='Grupo' value={grupoPerteneciente} />
-                  <Information text='Masa atómica' value={datos.atomicMass} />
-                  <Information text='Punto de ebullición' value={`${datos.boilingPoint}ºC`} />
-                  <Information text='Afinidad electrónica' value={datos.electronAffinity} />
-                  <Information text='Configuración electrónica' value={datos.electronicConfiguration} />
-                  <Information text='Punto de derretimiento' value={`${datos.meltingPoint}ºC`} />
-                  <Information text='Estados de oxidación' value={datos.oxidationStates} />
+                  <Information text='Masa atómica' value={useSetNoDefinedValue(datos.atomicMass)} />
+                  <Information text='Punto de ebullición (ºC)' value={`${useSetNoDefinedValue(datos.boilingPoint)}`} />
+                  <Information text='Afinidad electrónica' value={useSetNoDefinedValue(datos.electronAffinity)} />
+                  <Information text='Configuración electrónica' value={useSetNoDefinedValue(datos.electronicConfiguration)} />
+                  <Information text='Punto de derretimiento (ºC)' value={`${useSetNoDefinedValue(datos.meltingPoint)}`} />
+                  <Information text='Estados de oxidación' value={useSetNoDefinedValue(datos.oxidationStates)} />
                   <Information text='Estado natural' value={useTransformarEstado(datos.standardState)} />
-                  <Information text='Año de descubrimiento' value={useTransformarYearAntiguo(datos.yearDiscovered)} />
+                  <Information text='Año de descubrimiento' value={useTransformarYearAntiguo(useSetNoDefinedValue(datos.yearDiscovered))} />
                 </div>
 
 
