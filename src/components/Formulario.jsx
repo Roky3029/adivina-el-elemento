@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import elementos from './arraysDatos/ElementosFormulario'
 import SIMBOLO_POSIBILIDADES from './arraysDatos/SimbolosElementos'
 import Loader from './Loader'

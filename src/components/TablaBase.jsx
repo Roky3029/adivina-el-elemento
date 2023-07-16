@@ -1,6 +1,5 @@
 import ListaInformacion from './arraysDatos/ListaInformacion'
 import useObtenerGrupo from '../hooks/useObtenerGrupo'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const TablaBase = ({ filtrarElementos, quizMode, elementosAcertados }) => {
