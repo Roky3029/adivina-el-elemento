@@ -44,6 +44,7 @@ Si encuentras algun error en AEE, te agradecería que lo colocaras en una issue 
 
 Hey 👋, soy Roky, y si te gustan mis páginas puedes seguirme en algunas de mis redes sociales, o unirte a mi servidor de Discord:
 <br>
+[Twitter](https://twitter.com/Dev30Kirky) 🐦
 <br>
 [Github](https://github.com/Roky3029) 🐈
 <br>
